@@ -43,5 +43,20 @@ print(shawn(10))
 print(shawn(20))
 print(shawn(-40), "\n")
 
+def first_name(name):
+    if len(name) >= 10:
+        return "You have a long name!"
+    elif len(name) >= 5:
+        return "You have a normal size name."
+    elif len(name) >= 3:
+        return "You have a short name."
+    else:
+        return None
+print(first_name("Shawn"))
+print(first_name("Constantine"))
+print(first_name("Ben"))
+print(first_name(""), "\n")
+
+
 #$end
 # -------------------------------------------------------------------
