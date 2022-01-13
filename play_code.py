@@ -55,6 +55,8 @@ def first_name(name):
 print(first_name("Shawn"))
 print(first_name("Constantine"))
 print(first_name("Ben"))
+print(first_name("Ty"))
+print(first_name("n"))
 print(first_name(""), "\n")
 
 
