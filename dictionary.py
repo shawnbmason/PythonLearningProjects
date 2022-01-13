@@ -48,12 +48,3 @@ try:
 except KeyError:
   print("Unknown Caffeine Level", "\n")
   
-def shawn(num):
-    if num >= 10:
-        return True
-    else:
-        return False
-print(shawn(5))
-print(shawn(10))
-print(shawn(20))
-print(shawn(-40), "\n")

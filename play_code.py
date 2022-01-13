@@ -33,5 +33,15 @@ heights = [61, 70, 67, 64]
 students = {key:value for key, value in zip(names, heights)}
 print(students)
 
+def shawn(num):
+    if num >= 10:
+        return True
+    else:
+        return False
+print(shawn(5))
+print(shawn(10))
+print(shawn(20))
+print(shawn(-40), "\n")
+
 #$end
 # -------------------------------------------------------------------
