@@ -148,9 +148,9 @@ tarot = { 1:	"The Magician", 2:	"The High Priestess", 3:
 
 spread = {}
 
-spread["past"] = tarot.pop(13)
-spread["present"] = tarot.pop(22)
-spread["future"] = tarot.pop(10)
+spread["past"] = tarot.pop(20)
+spread["present"] = tarot.pop(15)
+spread["future"] = tarot.pop(8)
 
 for key, value in spread.items():
   print("Your " + str(key) + " is the " + str(value) + " card.")
