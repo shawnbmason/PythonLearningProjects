@@ -210,5 +210,3 @@ def play_word(player, word):
 
 play_word("player1", "CODE")
 print(player_to_words)
-
- 
