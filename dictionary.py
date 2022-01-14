@@ -156,8 +156,6 @@ for key, value in spread.items():
   print("Your " + str(key) + " is the " + str(value) + " card.")
 print("\n")
 
-# ----------------------------------------------------------------------------------------
-
 # LAST PROJECT "Make sence of it what you will..." 
 print("     -----------WTF Project!-------------", "\n")
 letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", 
