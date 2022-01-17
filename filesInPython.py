@@ -36,13 +36,76 @@ with open("fileWriteExample.txt") as read_append_doc:
   read = read_append_doc.read()
   print(read, "\n")
 
+
+# this will seperate the list by the list with whatever the deliniter is
+import csv
+
+with open("emails.csv") as email_csv:
+  email_reader = csv.DictReader(email_csv, delimiter="@")
+  for email_list in email_reader:
+    print(email_list, "\n")
+
+
 # Here’s how we’d create a list of the email addresses of all 
 # of the users in the above table:
 
-# import csv
+import csv
 
-# list_of_email_addresses = []
-# with open("users.csv", newline="") as users_csv:
-#   user_reader = csv.DictReader(users_csv)
-#   for row in user_reader:
-#     list_of_email_addresses.append(row["Email"])
+list_of_email_addresses = []
+with open("users.csv", newline="") as users_csv:
+  user_reader = csv.DictReader(users_csv)
+  for row in user_reader:
+    list_of_email_addresses.append(row["Email"])
+    print(list_of_email_addresses, "\n")
+  
+# This will add a list to the file specified
+access_log = [{'time': '08:39:37', 'limit': 844404, 
+               'address': '1.227.124.181'}, 
+              {'time': '13:13:35', 'limit': 543871, 
+               'address': '198.51.139.193'}, 
+              {'time': '19:40:45', 'limit': 3021, 
+               'address': '172.1.254.208'}, 
+              {'time': '18:57:16', 'limit': 67031769, 
+               'address': '172.58.247.219'}, 
+              {'time': '21:17:13', 'limit': 9083, 
+               'address': '124.144.20.113'}, 
+              {'time': '23:34:17', 'limit': 65913, 
+               'address': '203.236.149.220'}, 
+              {'time': '13:58:05', 'limit': 1541474, 
+               'address': '192.52.206.76'}, 
+              {'time': '10:52:00', 'limit': 11465607, 
+               'address': '104.47.149.93'}, 
+              {'time': '14:56:12', 'limit': 109, 
+               'address': '192.31.185.7'}, 
+              {'time': '18:56:35', 'limit': 6207, 
+               'address': '2.228.164.197'}, 
+              {'time': 'This is my time', 'limit': ' This is my limit ', 'address': ' This is my address'}]
+fields = ['time', 'address', 'limit']
+
+import csv
+
+with open("addresses.csv", "w") as logger_csv:
+  log_writer = csv.DictWriter(logger_csv, fieldnames=fields)
+  log_writer.writeheader()
+  for item in access_log:
+   log_writer.writerow(item)  
+
+
+# Reading a JSON file
+import json
+
+with open("message.json") as message_json:
+  message = json.load(message_json)
+  
+  print(message['text'])
+  
+# Writing a JSON file
+data_payload = [
+  {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+   'follow up': 'But enough talk!'}
+]
+
+import json
+
+with open("message_write.json", "w") as data_json:
+  json.dump(data_payload, data_json)
